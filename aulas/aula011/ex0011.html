@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+        <h1>Identificador de Nacionalidade</h1>
+        <input type="text" value="" id="txtp">
+        <input type="button" value="VERIFICAR" id="verificar" onclick="verificar()">
+        <div id="res">
+    
+        </div>
+    
+      <script>
+        function verificar() {
+          var país = document.querySelector('input#txtp')
+          var res = document.querySelector('div#res')
+          var nacionalidade = String(país.value)
+    
+          res.innerHTML += `<p>Seus país de <strong>origem</strong>: ${nacionalidade}.</p>`
+          if (nacionalidade == 'Brasil' || nacionalidade == 'brasil') {
+            res.innerHTML += `<p>Então significa que você é Brasileiro.</p>`
+          } else {
+            res.innerHTML += `<p>Então significa que você é Estrangeiro.</p>`
+          }
+        }
+      </script>
+    
+    
+</body>
+</html>
